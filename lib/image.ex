@@ -3,5 +3,5 @@ defmodule Identicon.Image do
   Struct for storing the hex values of a hashed string
   """
 
-  defstruct hex: nil, color: nil
+  defstruct hex: nil, color: nil, grid: nil
 end
