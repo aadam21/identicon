@@ -1,18 +1,19 @@
 defmodule Identicon do
   @moduledoc """
-  Documentation for Identicon.
+  Accept a string and create a MD5 hash. This is used to generate an identicon image
   """
 
-  @doc """
-  Hello world.
+  def main(input) do
+    input
+    |> hash_input
+  end
 
-  ## Examples
-
-      iex> Identicon.hello()
-      :world
-
+  @doc"""
+    Accepts a string input, uses that to create an MD5 hash, then creates a
+    list of bytes from the hash
   """
-  def hello do
-    :world
+  def hash_input(input) do
+    :crypto.hash(:md5, input)
+    |> :binary.bin_to_list
   end
 end
