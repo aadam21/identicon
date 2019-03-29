@@ -1,6 +1,6 @@
 # Identicon
 
-Elixir app
+Elixir application for creating a custom identicon from a string input
 
 ## Installation
 
